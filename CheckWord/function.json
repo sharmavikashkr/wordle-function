@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "inputWords",
+      "databaseName": "wordle-db",
+      "collectionName": "wordle-container",
+      "connectionStringSetting": "CosmosDbConnectionString",
+      "sqlQuery": "SELECT * from c"
+    }
+  ],
+  "scriptFile": "../dist/CheckWord/index.js"
+}
