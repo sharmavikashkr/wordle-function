@@ -18,7 +18,7 @@
     {
       "type": "cosmosDB",
       "direction": "in",
-      "name": "inputWords",
+      "name": "dbWords",
       "databaseName": "wordle-db",
       "collectionName": "wordle-container",
       "connectionStringSetting": "CosmosDbConnectionString",
